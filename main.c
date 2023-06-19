@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+
+
+
 const char* splash_screen =
 "                              .- \n"
 "                              .-- \n"
