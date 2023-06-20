@@ -12,7 +12,7 @@ void recursive_loading(int progress)
     }
 
     //Code to be executed
-    printf("Project Loading in [%d%%], progress");
+    printf("\t\t\t\t\t\t Project Loading in [%d%%] \t\t\t\t\t\t", progress);
     fflush(stdout);
     usleep(10000);
     printf("\r");
@@ -26,20 +26,20 @@ void recursive_loading(int progress)
 void splash (void)
 {
     system("cls");
-    printf("........................Project Loading Complete!........................\n\n\n");
+    printf("\n\n\n\n\t\t\t\t\t.............................Project Loading Complete!.............................\n\n\n");
     sleep(1);
     getchar();
 
 
 char wel[] = "\n"
-"                       /$$      /$$           /$$                                               \n"
-"                      | $$  /$ | $$          | $$                                               \n"
-"                      | $$ /$$$| $$  /$$$$$$ | $$  /$$$$$$$  /$$$$$$  /$$$$$$/$$$$   /$$$$$$    \n"
-"                      | $$/$$ $$ $$ /$$__  $$| $$ /$$_____/ /$$__  $$| $$_  $$_  $$ /$$__  $$   \n"
-"                      | $$$$_  $$$$| $$$$$$$$| $$| $$      | $$  \\ $$| $$ \\ $$ \\ $$| $$$$$$$$   \n"
-"                      | $$$/ \\  $$$| $$_____/| $$| $$      | $$  | $$| $$ | $$ | $$| $$_____/   \n"
-"                      | $$/   \\  $$|  $$$$$$$| $$|  $$$$$$$|  $$$$$$/| $$ | $$ | $$|  $$$$$$$   \n"
-"                      |__/     \\__/ \\_______/|__/ \\_______/ \\______/ |__/ |__/ |__/ \\_______/   \n";
+"                                 \t\t\t  /$$      /$$           /$$                                               \n"
+"                                 \t\t\t | $$  /$ | $$          | $$                                               \n"
+"                                 \t\t\t | $$ /$$$| $$  /$$$$$$ | $$  /$$$$$$$  /$$$$$$  /$$$$$$/$$$$   /$$$$$$    \n"
+"                                 \t\t\t | $$/$$ $$ $$ /$$__  $$| $$ /$$_____/ /$$__  $$| $$_  $$_  $$ /$$__  $$   \n"
+"                                 \t\t\t | $$$$_  $$$$| $$$$$$$$| $$| $$      | $$  \\ $$| $$ \\ $$ \\ $$| $$$$$$$$   \n"
+"                                 \t\t\t | $$$/ \\  $$$| $$_____/| $$| $$      | $$  | $$| $$ | $$ | $$| $$_____/   \n"
+"                                 \t\t\t | $$/   \\  $$|  $$$$$$$| $$|  $$$$$$$|  $$$$$$/| $$ | $$ | $$|  $$$$$$$   \n"
+"                                 \t\t\t |__/     \\__/ \\_______/|__/ \\_______/ \\______/ |__/ |__/ |__/ \\_______/   \n";
 
 
 
@@ -49,13 +49,16 @@ char wel[] = "\n"
         printf("%c",wel[i]);
         if(wel[i]=='\n')
         {
-            usleep(353535);
+            usleep(222222);
         }
     }
-    printf("\n\n");
+
+    system("cls");
+
+    printf("\n");
     sleep(1);
-    printf("--------------------Press any key to continue--------------------\n");
-    getchar();
+    printf("\t\t\t\t\t\t--------------------Press any key to continue--------------------\n");
+    sleep(1);
 
     FILE*sp;
     sp=fopen("image.txt","r");
@@ -93,9 +96,10 @@ char lib[]="\n"
              usleep(353535);
          }
      }
+     system("cls");
      printf("\n\n\n");
      sleep(1);
-     printf("...................Press any key to continue...................\n");
+     printf("\t\t\t\t\t\t...................Press any key to continue...................\n");
      getchar();
 
 
