@@ -34,6 +34,7 @@ int main()
 
         switch (choice) {
             case 1:
+                system("D:\\book.jpg");
                 addBook();
                 printf("\n\nAdding a book ...\n\n");
                 sleep(1);
@@ -42,6 +43,7 @@ int main()
                 system("cls");
                 break;
             case 2:
+                system("D:\\library_books.jpg");
                 displayFile("library.txt");
                 printf("\n\nDisplaying all books ...\n\n");
                 sleep(4);
@@ -78,6 +80,7 @@ int main()
                 printf("\n\nExiting the program ...\n\n");
                 sleep(1);
                 printf("                 ...THANK YOU FOR USING OUR MANAGEMENT SYSTEM...\n");
+                system("D:\\thank_you.jpg");
                 sleep(3);
                 system("cls");
                 break;
@@ -132,10 +135,10 @@ void displayFile(const char* filename) {
 
     struct Book book;
 
-    printf("%-10s %-40s %-20s %-15s %-15s\n", "Book ID", "Title", "Author", "Student Name", "Date of Issue");
+    printf("%-10s %-40s %-40s %-15s %-15s\n", "Book ID", "Title", "Author", "Student Name", "Date of Issue");
 
     while (fread(&book, sizeof(struct Book), 1, file) == 1) {
-        printf("%-10d %-40s %-20s %-15s %-15s\n", book.bookId, book.title, book.author, book.studentName, book.dateOfIssue);
+        printf("%-10d %-40s %-40s %-15s %-15s\n", book.bookId, book.title, book.author, book.studentName, book.dateOfIssue);
     }
 
     fclose(file);
@@ -152,11 +155,11 @@ void searchBook(const char* searchTitle) {
     int found = 0;
 
     printf("Search Results:\n\n\n");
-    printf("%-10s %-40s %-20s %-15s %-15s\n", "Book ID", "Title", "Author", "Student Name", "Date of Issue");
+    printf("%-10s %-40s %-40s %-15s %-15s\n", "Book ID", "Title", "Author", "Student Name", "Date of Issue");
 
     while (fread(&book, sizeof(struct Book), 1, file) == 1) {
         if (strcmp(book.title, searchTitle) == 0) {
-            printf("%-10d %-40s %-20s %-15s %-15s\n", book.bookId, book.title, book.author, book.studentName, book.dateOfIssue);
+            printf("%-10d %-40s %-40s %-15s %-15s\n", book.bookId, book.title, book.author, book.studentName, book.dateOfIssue);
             found = 1;
         }
     }
